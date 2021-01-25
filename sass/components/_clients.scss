@@ -1,0 +1,40 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+  margin-bottom: 50px;
+}
+
+.clients-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-links .link {
+  display: flex;
+  height: 90px;
+  width: 170px;
+  border-radius: 4px;
+  border: 1px solid;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: $icon-color;
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+}
+
+.clients-icon {
+  display: block;
+  fill: currentColor;
+}

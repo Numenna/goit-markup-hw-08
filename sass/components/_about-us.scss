@@ -1,0 +1,40 @@
+.about-us,
+.team-title {
+  @include section-title(36px);
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  margin-bottom: 94px;
+}
+
+.thumb {
+  position: relative;
+}
+
+.link-image {
+  display: block;
+  height: auto;
+}
+
+.thumb > .label {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  margin: 0;
+  padding: 27px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: $color-white;
+  background-color: rgba(47, 48, 58, 0.8);
+}

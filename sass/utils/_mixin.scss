@@ -1,0 +1,13 @@
+@mixin flex($center) {
+  display: flex;
+  align-items: center;
+  justify-content: $center;
+}
+
+@mixin section-title($size) {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: $size;
+  line-height: 1.17;
+  text-align: center;
+}

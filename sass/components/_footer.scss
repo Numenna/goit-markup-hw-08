@@ -1,87 +1,109 @@
 .footer {
   background-color: $background-dark;
-  min-width: 1600px;
-  display: flex;
+  // min-width: 1600px;
+  // display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  // margin-left: auto;
+  // margin-right: auto;
+  // align-items: center;
 }
 
-.align {
+.cont-item {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .contacts {
+  text-align: center;
   width: 231px;
-  margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    // margin-right: 70px;
+  }
 }
 
-.accent {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: $active-color;
-}
+// .accent {
+//   font-family: "Raleway", sans-serif;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.19;
+//   letter-spacing: 0.03em;
+//   color: $active-color;
+// }
 
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
   color: $color-white;
 }
+
 .footer .address {
   font-style: normal;
-  font-weight: 400;
+  // font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
+  // letter-spacing: 0.03em;
   color: $color-white;
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
-.link {
-  display: block;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+.address .address-link {
+  // font-size: 14px;
+  // line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+}
+.address.list {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+  }
+}
+.address.list .list-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .join-in-contacts {
-  display: inline-flex;
-  margin-top: 12px;
+  text-align: center;
   width: 206px;
-  height: 80px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
+
 .sign-in h3 {
-  font-family: inherit;
+  display: block;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  display: block;
-  height: 16px;
   margin-bottom: 20px;
+  padding: 0;
+  margin-top: 0;
+  color: #ffffff;
 }
 
 .social-media {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+  }
 }
+
 .social-media .item {
   display: block;
   flex-direction: row;
@@ -91,14 +113,13 @@
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  margin-right: 10px;
   margin-left: 0px;
   padding-left: 0px;
   cursor: pointer;
 }
 
-.social-media .item:last-child {
-  margin-right: 0px;
+.social-media .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-media .item:nth-child(1) {
@@ -117,34 +138,57 @@
   background-image: url(../images/linkedin-1.svg);
 }
 
-.social-media .item:hover {
+.social-media .item:hover,
+.social-media .item:focus {
   background-color: $active-color;
 }
 
 .subscribe {
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: unset;
+  }
 }
 
 .form-subscribe {
+  width: 100%;
   display: flex;
-  justify-content: start;
-  width: 570px;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .subscribe-field {
+  width: 100%;
   position: relative;
+  text-align: center;
 }
 
 .subscribe-input {
-  display: flex;
-  width: 358px;
+  // display: flex;
+  width: 100%;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-  color: $primary-text-color;
+  color: rgba(255, 255, 255, 0.6);
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-input::placeholder {

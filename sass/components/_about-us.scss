@@ -1,6 +1,19 @@
+.block {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 94px;
+  }
+}
+
 .about-us,
 .team-title {
-  @include section-title(36px);
+  @include section-title(28px);
+  @media screen and (min-width: 1200px) {
+    @include section-title(36px);
+    line-height: 1.17;
+  }
 }
 
 .images {
@@ -8,18 +21,14 @@
   justify-content: space-between;
 }
 
-.block {
-  margin-bottom: 94px;
-}
-
 .thumb {
   position: relative;
 }
 
-.link-image {
-  display: block;
-  height: auto;
-}
+// .link-image {
+//   display: block;
+//   height: auto;
+// }
 
 .thumb > .label {
   display: inline-block;
